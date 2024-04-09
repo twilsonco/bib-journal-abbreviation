@@ -45,6 +45,6 @@ if __name__ == '__main__':
             customize_json = json.load(fin)
         journal_to_abbr.update(customize_json)
 
-    journal_to_abbr = {k.lower(): v for k, v in journal_to_abbr.items()} 
+    journal_to_abbr = {k.lower().replace('the ',''): v for k, v in journal_to_abbr.items()} 
 
     main(journal_to_abbr)
